@@ -432,14 +432,14 @@ if st.button("2つの手法でおすすめ犬種を検索"):
     left, right = st.columns(2)
 
     with left:
-        st.subheader("比較対象：全文Sentence-BERT")
+        st.subheader("全文Sentence-BERT")
         for rank, result in enumerate(full_results[:3], start=1):
             st.markdown(f"### {rank}位")
             show_result_card(result, "full")
             st.divider()
 
     with right:
-        st.subheader("改善手法：項目別Sentence-BERT")
+        st.subheader("項目別Sentence-BERT")
         for rank, result in enumerate(item_results[:3], start=1):
             st.markdown(f"### {rank}位")
             show_result_card(result, "item")
